@@ -33,11 +33,24 @@ export class EmployeeUpdateComponent {
 
       (response:any)=>
       {
+        const obj = response 
 
-        console.log(response)
+        const length = Object.keys(obj).length;
 
-        this.searchData=response
+        console.log(length)
 
+        if(length==0)
+        {
+          alert("Employee does not exist in database!")
+        }
+        else
+        {
+          alert("Employee Found!")
+
+          console.log(response)
+
+          this.searchData=response
+        }
       }
 
     )
