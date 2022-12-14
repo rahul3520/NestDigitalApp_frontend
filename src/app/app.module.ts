@@ -18,6 +18,7 @@ import { SecurityGuardLoginPageComponent } from './security-guard-login-page/sec
 import { SecurityGuardProfileComponent } from './security-guard-profile/security-guard-profile.component';
 import { EmployeeLoginbarComponent } from './employee-loginbar/employee-loginbar.component';
 import { SecurityGuardLoginbarComponent } from './security-guard-loginbar/security-guard-loginbar.component';
+import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 
 
 const myRoute:Routes=[
@@ -52,6 +53,10 @@ const myRoute:Routes=[
   {
     path:"securityGuardProfile",
     component:SecurityGuardProfileComponent
+  },
+  {
+    path:"searchEmployee",
+    component:EmployeeSearchComponent
   }
 
 ]
@@ -69,7 +74,8 @@ const myRoute:Routes=[
     SecurityGuardLoginPageComponent,
     SecurityGuardProfileComponent,
     EmployeeLoginbarComponent,
-    SecurityGuardLoginbarComponent
+    SecurityGuardLoginbarComponent,
+    EmployeeSearchComponent
   ],
   imports: [
     BrowserModule,
