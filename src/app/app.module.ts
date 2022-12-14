@@ -21,6 +21,7 @@ import { SecurityGuardLoginbarComponent } from './security-guard-loginbar/securi
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 import { EmployeeDeleteComponent } from './employee-delete/employee-delete.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
+import { EmployeeGrantLeavesComponent } from './employee-grant-leaves/employee-grant-leaves.component';
 
 
 const myRoute:Routes=[
@@ -67,6 +68,10 @@ const myRoute:Routes=[
   {
     path:"updateEmployee",
     component:EmployeeUpdateComponent
+  },
+  {
+    path:"grantLeaveForEmployee",
+    component:EmployeeGrantLeavesComponent
   }
 
 ]
@@ -87,7 +92,8 @@ const myRoute:Routes=[
     SecurityGuardLoginbarComponent,
     EmployeeSearchComponent,
     EmployeeDeleteComponent,
-    EmployeeUpdateComponent
+    EmployeeUpdateComponent,
+    EmployeeGrantLeavesComponent
   ],
   imports: [
     BrowserModule,
