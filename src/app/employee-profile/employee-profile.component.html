@@ -1,0 +1,33 @@
+<app-employee-loginbar></app-employee-loginbar>
+
+<h1>Logged Employee ID:{{empID}}</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                    <div class="card" >
+                        <div class="card-header">
+                            {{searchData[0].empCode}}
+                            {{searchData[0].name}}
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{searchData[0].designation}}</li>
+  
+                            <li class="list-group-item">{{searchData[0].salary}}</li>
+                            <li class="list-group-item">{{searchData[0].phoneNo}}</li>
+                            <!-- <li class="list-group-item">{{searchData[0].address}}</li> -->
+                            <li class="list-group-item">{{searchData[0].emailId}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
