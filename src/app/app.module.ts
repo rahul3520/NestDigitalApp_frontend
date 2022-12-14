@@ -20,6 +20,7 @@ import { EmployeeLoginbarComponent } from './employee-loginbar/employee-loginbar
 import { SecurityGuardLoginbarComponent } from './security-guard-loginbar/security-guard-loginbar.component';
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 import { EmployeeDeleteComponent } from './employee-delete/employee-delete.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
 
 const myRoute:Routes=[
@@ -62,6 +63,10 @@ const myRoute:Routes=[
   {
     path:"deleteEmployee",
     component:EmployeeDeleteComponent
+  },
+  {
+    path:"updateEmployee",
+    component:EmployeeUpdateComponent
   }
 
 ]
@@ -81,7 +86,8 @@ const myRoute:Routes=[
     EmployeeLoginbarComponent,
     SecurityGuardLoginbarComponent,
     EmployeeSearchComponent,
-    EmployeeDeleteComponent
+    EmployeeDeleteComponent,
+    EmployeeUpdateComponent
   ],
   imports: [
     BrowserModule,
