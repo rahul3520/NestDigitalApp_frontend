@@ -32,10 +32,24 @@ export class EmployeeRegistrationPageComponent {
 
           alert("employee registered successfully!")
           localStorage.setItem("empId",response.empID)
+          this.empCode=""
+          this.name=""
+          this.designation=""
+          this.salary=""
+          this.phoneNo=""
+          this.emailId=""
+          this.password=""
           
         } else {
 
-          alert("Failed to register employee")
+          alert("Failed to register employee. Try again")
+          this.empCode=""
+          this.name=""
+          this.designation=""
+          this.salary=""
+          this.phoneNo=""
+          this.emailId=""
+          this.password=""
           
         }
       }

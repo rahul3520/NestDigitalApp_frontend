@@ -1,6 +1,6 @@
 <app-employee-loginbar></app-employee-loginbar>
 
-<h1>Logged Employee ID:{{empID}}</h1>
+<h4 style="text-align: left;">Logged Employee ID:{{empID}}</h4>
 
 <div class="container">
     <div class="row">
@@ -11,16 +11,18 @@
 
                     <div class="card" >
                         <div class="card-header">
-                            {{searchData[0].empCode}}
-                            {{searchData[0].name}}
+                            Employee Code: {{searchData[0].empCode}}
+                            
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{searchData[0].designation}}</li>
+                            <li class="list-group-item">Name: {{searchData[0].name}}</li>
+
+                            <li class="list-group-item">Designation: {{searchData[0].designation}}</li>
   
-                            <li class="list-group-item">{{searchData[0].salary}}</li>
-                            <li class="list-group-item">{{searchData[0].phoneNo}}</li>
+                            <li class="list-group-item">Salary: {{searchData[0].salary}}</li>
+                            <li class="list-group-item">Phone No: {{searchData[0].phoneNo}}</li>
                             <!-- <li class="list-group-item">{{searchData[0].address}}</li> -->
-                            <li class="list-group-item">{{searchData[0].emailId}}</li>
+                            <li class="list-group-item">Email ID: {{searchData[0].emailId}}</li>
                         </ul>
                     </div>
                 </div>

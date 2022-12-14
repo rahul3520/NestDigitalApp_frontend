@@ -16,6 +16,8 @@ import { ViewAllEmployeesComponent } from './view-all-employees/view-all-employe
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { SecurityGuardLoginPageComponent } from './security-guard-login-page/security-guard-login-page.component';
 import { SecurityGuardProfileComponent } from './security-guard-profile/security-guard-profile.component';
+import { EmployeeLoginbarComponent } from './employee-loginbar/employee-loginbar.component';
+import { SecurityGuardLoginbarComponent } from './security-guard-loginbar/security-guard-loginbar.component';
 
 
 const myRoute:Routes=[
@@ -65,7 +67,9 @@ const myRoute:Routes=[
     ViewAllEmployeesComponent,
     EmployeeProfileComponent,
     SecurityGuardLoginPageComponent,
-    SecurityGuardProfileComponent
+    SecurityGuardProfileComponent,
+    EmployeeLoginbarComponent,
+    SecurityGuardLoginbarComponent
   ],
   imports: [
     BrowserModule,

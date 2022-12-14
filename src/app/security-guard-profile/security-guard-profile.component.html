@@ -1,6 +1,6 @@
-<app-employee-loginbar></app-employee-loginbar>
+<app-security-guard-loginbar></app-security-guard-loginbar>
 
-<h1>Logged Security Guard ID:{{sgID}}</h1>
+<h3 style="text-align: left;">Logged Security Guard ID:{{sgID}}</h3>
 
 <div class="container">
     <div class="row">
@@ -11,16 +11,16 @@
 
                     <div class="card" >
                         <div class="card-header">
-                            {{searchData[0].empCode}}
-                            {{searchData[0].name}}
+                            Security Guard Code: {{searchData[0].empCode}}
+                            
                         </div>
                         <ul class="list-group list-group-flush">
-                            <!-- <li class="list-group-item">{{searchData[0].designation}}</li> -->
+                            <li class="list-group-item">Name: {{searchData[0].name}}</li>
   
-                            <li class="list-group-item">{{searchData[0].salary}}</li>
-                            <li class="list-group-item">{{searchData[0].phoneNo}}</li>
+                            <li class="list-group-item">Salary: {{searchData[0].salary}}</li>
+                            <li class="list-group-item">Phone No: {{searchData[0].phoneNo}}</li>
                             <!-- <li class="list-group-item">{{searchData[0].address}}</li> -->
-                            <li class="list-group-item">{{searchData[0].emailId}}</li>
+                            <li class="list-group-item">Email ID: {{searchData[0].emailId}}</li>
                         </ul>
                     </div>
                 </div>
