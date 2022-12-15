@@ -1,0 +1,35 @@
+<app-admin-logged-in-page></app-admin-logged-in-page>
+
+<h1 style="text-align: center;">List of Employees</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+
+                    <div class="card" >
+                        <div class="card-header">
+                            Employee Code : {{i.empCode}}
+                            
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">Name : {{i.name}}</li>
+
+                            <li class="list-group-item">Designation : {{i.designation}}</li>
+  
+                            <li class="list-group-item">Salary : {{i.salary}}</li>
+                            <li class="list-group-item">Phone No: {{i.phoneNo}}</li>
+                            <li class="list-group-item">Email ID : {{i.emailId}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

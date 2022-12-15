@@ -1,0 +1,52 @@
+<app-admin-logged-in-page></app-admin-logged-in-page>
+
+<h1 style="text-align: center;">Register new employee!</h1>
+<div class="container">
+    <div class="row">
+
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Employee code</label>
+                    <input name="empCode" [(ngModel)]="empCode" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">designation</label>
+                    <input name="designation" [(ngModel)]="designation" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control"> salary</label>
+                    <input name="salary" [(ngModel)]="salary" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Phone No</label>
+                    <input name="phoneNo" [(ngModel)]="phoneNo" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Email ID</label>
+                    <input name="emailId" [(ngModel)]="emailId" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Password</label>
+                    <input name="password" [(ngModel)]="password" type="password" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="EmployeeRegister()" class="btn btn-success">Register</button>
+                </div>
+                <!-- <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a routerLink="/employeeLogin"> <---go back to Employee Login page</a>
+                </div> -->
+
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
