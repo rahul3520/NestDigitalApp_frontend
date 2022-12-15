@@ -1,0 +1,88 @@
+<app-admin-logged-in-page></app-admin-logged-in-page>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Leave Application ID</th>
+                                <th>Employee ID</th>
+                                <th>Leave Type</th>
+                                <th>Remarks</th>
+                                <th>From date</th>
+                                <th>To date</th>
+                                <th>Apply date</th>
+                                <th>Leave Status</th>
+                                <th>Current Year</th>
+                                <th>Casual Leave</th>
+                                <th>Sick Leave</th>
+                                <th>Special Leave</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody *ngFor="let i of searchData">
+                            <tr>
+                                <td>{{i.id}}</td>
+                                <td>{{i.emp_id}}</td>
+                                <td>{{i.leave_type}}</td>
+                                <td>{{i.remarks}}</td>
+                                <td>{{i.from_date}}</td>
+                                <td>{{i.to_date}}</td>
+                                <td>{{i.apply_date}}</td>
+                                <td>{{i.leave_status}}</td>
+                                <td>{{i.year}}</td>
+                                <td>{{i.casual_leave}}</td>
+                                <td>{{i.sick_leave}}</td>
+                                <td>{{i.special_leave}}</td>
+                            </tr>
+                        </tbody>
+        
+        
+                    </table>
+        
+        
+
+
+                </div>
+
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Leave Application ID</label>
+                    <input name="id" [(ngModel)]="id" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Employee ID</label>
+                    <input name="empId" [(ngModel)]="empId" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Leave Status to update</label>
+                    <input name="leaveStatus" [(ngModel)]="leaveStatus" type="text" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <button (click)="LeaveApproval()" class="btn btn-warning">Update leave status</button>
+                </div>
+
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Remaining Casual Leaves</label>
+                    <input type="text" class="form-control" value="{{remCL}}">
+                </div>
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Remaining Sick Leaves</label>
+                    <input type="text" class="form-control" value="{{remSL}}">
+                </div>
+                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <label for="" class="label-control">Remaining Special Leaves</label>
+                    <input type="text" class="form-control" value="{{remOL}}">
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>

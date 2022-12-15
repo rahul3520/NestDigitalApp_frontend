@@ -25,6 +25,7 @@ import { EmployeeGrantLeavesComponent } from './employee-grant-leaves/employee-g
 import { AddSecurityGuardComponent } from './add-security-guard/add-security-guard.component';
 import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
 import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component';
+import { EmployeeLeaveHandleComponent } from './employee-leave-handle/employee-leave-handle.component';
 
 
 const myRoute:Routes=[
@@ -87,6 +88,10 @@ const myRoute:Routes=[
   {
     path:"viewMyLeaves",
     component:ViewMyLeavesComponent
+  },
+  {
+    path:"employeeLeaveHandle",
+    component:EmployeeLeaveHandleComponent
   }
 
 ]
@@ -111,7 +116,8 @@ const myRoute:Routes=[
     EmployeeGrantLeavesComponent,
     AddSecurityGuardComponent,
     ApplyForLeaveComponent,
-    ViewMyLeavesComponent
+    ViewMyLeavesComponent,
+    EmployeeLeaveHandleComponent
   ],
   imports: [
     BrowserModule,
