@@ -63,4 +63,9 @@ export class ApiService {
     return this.http.post("http://localhost:8080/addSecurityGuard",dataToSend)
   }
 
+  ApplyForLeave=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addLeave",dataToSend)
+  }
+
 }

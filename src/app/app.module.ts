@@ -23,6 +23,7 @@ import { EmployeeDeleteComponent } from './employee-delete/employee-delete.compo
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { EmployeeGrantLeavesComponent } from './employee-grant-leaves/employee-grant-leaves.component';
 import { AddSecurityGuardComponent } from './add-security-guard/add-security-guard.component';
+import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
 
 
 const myRoute:Routes=[
@@ -77,6 +78,10 @@ const myRoute:Routes=[
   {
     path:"addSecurityGuard",
     component:AddSecurityGuardComponent
+  },
+  {
+    path:"applyForLeave",
+    component:ApplyForLeaveComponent
   }
 
 ]
@@ -99,7 +104,8 @@ const myRoute:Routes=[
     EmployeeDeleteComponent,
     EmployeeUpdateComponent,
     EmployeeGrantLeavesComponent,
-    AddSecurityGuardComponent
+    AddSecurityGuardComponent,
+    ApplyForLeaveComponent
   ],
   imports: [
     BrowserModule,
