@@ -58,4 +58,9 @@ export class ApiService {
     return this.http.post("http://localhost:8080/initializeNewEmployee",dataToSend)
   }
 
+  AddSecurityGuard=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addSecurityGuard",dataToSend)
+  }
+
 }

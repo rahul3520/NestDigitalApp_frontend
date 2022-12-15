@@ -32,6 +32,29 @@ export class EmployeeRegistrationPageComponent {
 
           alert("employee registered successfully!")
           localStorage.setItem("empId",response.empID)
+
+          let data:any={"empId":localStorage.getItem("empId")}
+
+          this.api.AddEmployeeToLeaveCountDB(data).subscribe(
+
+            (response:any)=>
+            {
+              if(response.status=="employee added to leave count")
+              {
+                alert("Employee granted leaves for this year!")
+                
+                // this.empId=""
+              }
+              else
+              {
+                alert("Failed to grant leaves for employee..Try again")
+              }
+
+            }
+
+          )
+
+
           this.empCode=""
           this.name=""
           this.designation=""
