@@ -24,6 +24,7 @@ import { EmployeeUpdateComponent } from './employee-update/employee-update.compo
 import { EmployeeGrantLeavesComponent } from './employee-grant-leaves/employee-grant-leaves.component';
 import { AddSecurityGuardComponent } from './add-security-guard/add-security-guard.component';
 import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
+import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component';
 
 
 const myRoute:Routes=[
@@ -82,6 +83,10 @@ const myRoute:Routes=[
   {
     path:"applyForLeave",
     component:ApplyForLeaveComponent
+  },
+  {
+    path:"viewMyLeaves",
+    component:ViewMyLeavesComponent
   }
 
 ]
@@ -105,7 +110,8 @@ const myRoute:Routes=[
     EmployeeUpdateComponent,
     EmployeeGrantLeavesComponent,
     AddSecurityGuardComponent,
-    ApplyForLeaveComponent
+    ApplyForLeaveComponent,
+    ViewMyLeavesComponent
   ],
   imports: [
     BrowserModule,
