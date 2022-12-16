@@ -118,4 +118,9 @@ export class ApiService {
     return this.http.post("http://localhost:8080/addVisitorExit",dataToSend)
   }
 
+  ViewAllLeaveCountOfAllEmployess=()=>
+  {
+    return this.http.get("http://localhost:8080/viewAllLeaveCountOfAllEmployees")
+  }
+
 }

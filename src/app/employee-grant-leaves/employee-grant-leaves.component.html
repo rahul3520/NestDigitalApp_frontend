@@ -5,6 +5,32 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
             <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Year</th>
+                                <th>Remaining Casual Leaves</th>
+                                <th>Remaining Sick Leaves</th>
+                                <th>Remaining Special Leaves</th>
+                            </tr>
+                        </thead>
+
+                        <tbody *ngFor="let i of searchData">
+                            <tr>
+                                <td>{{i.empId}}</td>
+                                <td>{{i.year}}</td>
+                                <td>{{i.casualLeave}}</td>
+                                <td>{{i.sickLeave}}</td>
+                                <td>{{i.specialLeave}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="label-control">Enter Employee ID</label>
