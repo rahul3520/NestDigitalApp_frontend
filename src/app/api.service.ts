@@ -98,4 +98,24 @@ export class ApiService {
     return this.http.post("http://localhost:8080/addVisitorEntry",dataToSend)
   }
 
+  ViewAllEmployeeLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallEmployeeLogs")
+  }
+
+  UpdateEmployeeExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addEmployeeExit",dataToSend)
+  }
+
+  ViewAllVisitorLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallVisitorLogs")
+  }
+
+  UpdateVisitorExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addVisitorExit",dataToSend)
+  }
+
 }

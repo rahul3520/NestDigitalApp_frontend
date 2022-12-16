@@ -28,6 +28,8 @@ import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component
 import { EmployeeLeaveHandleComponent } from './employee-leave-handle/employee-leave-handle.component';
 import { EmployeeEntryComponent } from './employee-entry/employee-entry.component';
 import { VisitorEntryComponent } from './visitor-entry/visitor-entry.component';
+import { ViewAllEmployeeLogsComponent } from './view-all-employee-logs/view-all-employee-logs.component';
+import { ViewAllVisitorLogsComponent } from './view-all-visitor-logs/view-all-visitor-logs.component';
 
 
 const myRoute:Routes=[
@@ -102,6 +104,14 @@ const myRoute:Routes=[
   {
     path:"visitorEntryLog",
     component:VisitorEntryComponent
+  },
+  {
+    path:"viewAllEmployeeLogsandUpdateExitTime",
+    component:ViewAllEmployeeLogsComponent
+  },
+  {
+    path:"viewAllVisitorLogsandUpdateExitTime",
+    component:ViewAllVisitorLogsComponent
   }
 
 ]
@@ -129,7 +139,9 @@ const myRoute:Routes=[
     ViewMyLeavesComponent,
     EmployeeLeaveHandleComponent,
     EmployeeEntryComponent,
-    VisitorEntryComponent
+    VisitorEntryComponent,
+    ViewAllEmployeeLogsComponent,
+    ViewAllVisitorLogsComponent
   ],
   imports: [
     BrowserModule,
