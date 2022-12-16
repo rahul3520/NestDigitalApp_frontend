@@ -26,6 +26,8 @@ import { AddSecurityGuardComponent } from './add-security-guard/add-security-gua
 import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
 import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component';
 import { EmployeeLeaveHandleComponent } from './employee-leave-handle/employee-leave-handle.component';
+import { EmployeeEntryComponent } from './employee-entry/employee-entry.component';
+import { VisitorEntryComponent } from './visitor-entry/visitor-entry.component';
 
 
 const myRoute:Routes=[
@@ -92,6 +94,14 @@ const myRoute:Routes=[
   {
     path:"employeeLeaveHandle",
     component:EmployeeLeaveHandleComponent
+  },
+  {
+    path:"employeeEntryLog",
+    component:EmployeeEntryComponent
+  },
+  {
+    path:"visitorEntryLog",
+    component:VisitorEntryComponent
   }
 
 ]
@@ -117,7 +127,9 @@ const myRoute:Routes=[
     AddSecurityGuardComponent,
     ApplyForLeaveComponent,
     ViewMyLeavesComponent,
-    EmployeeLeaveHandleComponent
+    EmployeeLeaveHandleComponent,
+    EmployeeEntryComponent,
+    VisitorEntryComponent
   ],
   imports: [
     BrowserModule,
