@@ -1,0 +1,40 @@
+<app-employee-loginbar></app-employee-loginbar>
+
+<!-- <h4 style="text-align: left;">Logged Employee ID:{{empID}}</h4> -->
+
+<h4 style="text-align: center;">Status of Leaves Applied</h4>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+
+                    <div class="card" >
+                        <div class="card-header">
+                            Leave application ID: {{i.id}}
+                            
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Employee ID: {{i.empId}}</li>
+
+                            <li class="list-group-item">Leave Type: {{i.leaveType}}</li>
+  
+                            <li class="list-group-item">Remarks: {{i.remarks}}</li>
+                            <li class="list-group-item">From Date: {{i.fromDate}}</li>
+                            <li class="list-group-item">To Date: {{i.toDate}}</li>
+                            <li class="list-group-item">Apply Date: {{i.applyDate}}</li>
+                            
+                            <li class="list-group-item">Leave Status: {{i.leaveStatus}}</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
