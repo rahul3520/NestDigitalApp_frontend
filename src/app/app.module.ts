@@ -23,6 +23,9 @@ import { EmployeeDeleteComponent } from './employee-delete/employee-delete.compo
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { EmployeeGrantLeavesComponent } from './employee-grant-leaves/employee-grant-leaves.component';
 import { AddSecurityGuardComponent } from './add-security-guard/add-security-guard.component';
+import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
+import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component';
+import { EmployeeLeaveHandleComponent } from './employee-leave-handle/employee-leave-handle.component';
 
 
 const myRoute:Routes=[
@@ -77,6 +80,18 @@ const myRoute:Routes=[
   {
     path:"addSecurityGuard",
     component:AddSecurityGuardComponent
+  },
+  {
+    path:"applyForLeave",
+    component:ApplyForLeaveComponent
+  },
+  {
+    path:"viewMyLeaves",
+    component:ViewMyLeavesComponent
+  },
+  {
+    path:"employeeLeaveHandle",
+    component:EmployeeLeaveHandleComponent
   }
 
 ]
@@ -99,7 +114,10 @@ const myRoute:Routes=[
     EmployeeDeleteComponent,
     EmployeeUpdateComponent,
     EmployeeGrantLeavesComponent,
-    AddSecurityGuardComponent
+    AddSecurityGuardComponent,
+    ApplyForLeaveComponent,
+    ViewMyLeavesComponent,
+    EmployeeLeaveHandleComponent
   ],
   imports: [
     BrowserModule,
