@@ -30,6 +30,8 @@ import { EmployeeEntryComponent } from './employee-entry/employee-entry.componen
 import { VisitorEntryComponent } from './visitor-entry/visitor-entry.component';
 import { ViewAllEmployeeLogsComponent } from './view-all-employee-logs/view-all-employee-logs.component';
 import { ViewAllVisitorLogsComponent } from './view-all-visitor-logs/view-all-visitor-logs.component';
+import { ViewEmployeeLogsByDateComponent } from './view-employee-logs-by-date/view-employee-logs-by-date.component';
+import { ViewVisitorLogsByDateComponent } from './view-visitor-logs-by-date/view-visitor-logs-by-date.component';
 
 
 const myRoute:Routes=[
@@ -112,6 +114,14 @@ const myRoute:Routes=[
   {
     path:"viewAllVisitorLogsandUpdateExitTime",
     component:ViewAllVisitorLogsComponent
+  },
+  {
+    path:"viewEmployeeLogsByDate",
+    component:ViewEmployeeLogsByDateComponent
+  },
+  {
+    path:"viewVisitorLogsByDate",
+    component:ViewVisitorLogsByDateComponent
   }
 
 ]
@@ -141,7 +151,9 @@ const myRoute:Routes=[
     EmployeeEntryComponent,
     VisitorEntryComponent,
     ViewAllEmployeeLogsComponent,
-    ViewAllVisitorLogsComponent
+    ViewAllVisitorLogsComponent,
+    ViewEmployeeLogsByDateComponent,
+    ViewVisitorLogsByDateComponent
   ],
   imports: [
     BrowserModule,
