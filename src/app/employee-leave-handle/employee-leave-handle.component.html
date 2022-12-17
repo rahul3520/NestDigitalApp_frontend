@@ -49,15 +49,27 @@
 
                 </div>
 
-                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="label-control">Leave Application ID</label>
                     <input name="id" [(ngModel)]="id" type="text" class="form-control">
                 </div>
-                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="label-control">Employee ID</label>
                     <input name="empId" [(ngModel)]="empId" type="text" class="form-control">
                 </div>
-                <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Leave Type</label>
+                    
+                    <select name="leaveType" [(ngModel)]="leaveType" id="" class="form-control">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Casual">Casual Leave</option>
+                        <option value="Sick">Sick Leave</option>
+                        <option value="Special">Special Leave</option>
+                       
+                    </select>
+
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="label-control">Leave Status to update</label>
                     <input name="leaveStatus" [(ngModel)]="leaveStatus" type="text" class="form-control">
                 </div>
@@ -69,15 +81,15 @@
 
                 <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                     <label for="" class="label-control">Remaining Casual Leaves</label>
-                    <input type="text" class="form-control" value="{{remCL}}">
+                    <input type="number" class="form-control" value="{{remCL}}">
                 </div>
                 <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                     <label for="" class="label-control">Remaining Sick Leaves</label>
-                    <input type="text" class="form-control" value="{{remSL}}">
+                    <input type="number" class="form-control" value="{{remSL}}">
                 </div>
                 <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                     <label for="" class="label-control">Remaining Special Leaves</label>
-                    <input type="text" class="form-control" value="{{remOL}}">
+                    <input type="number" class="form-control" value="{{remOL}}">
                 </div>
 
             </div>

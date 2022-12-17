@@ -10,6 +10,7 @@ export class EmployeeLeaveHandleComponent {
 
   id=""
   empId=""
+  leaveType=""
   leaveStatus=""
 
   // casualLeaveCount=""
@@ -40,7 +41,7 @@ export class EmployeeLeaveHandleComponent {
   LeaveApproval=()=>
   {
 
-    let data:any={"id":this.id,"empId":this.empId,"leaveStatus":this.leaveStatus} 
+    let data:any={"id":this.id,"empId":this.empId,"leaveType":this.leaveType,"leaveStatus":this.leaveStatus} 
 
     console.log(data)
 
@@ -64,19 +65,19 @@ export class EmployeeLeaveHandleComponent {
             (response1:any)=>
             {
 
-              // const obj = response1 
+              const obj = response1 
 
-              // const length = Object.keys(obj).length;
+              const length = Object.keys(obj).length;
 
-              // console.log(length)
+              console.log(length)
 
-              // if(length==0)
-              // {
-              //   alert("Employee not granted leaves for the year!")
-              // }
-              // else
-              // {
-                // alert("Employee Found!")
+              if(length==0)
+              {
+                alert("Employee not granted leaves for the year!")
+              }
+              else
+              {
+                alert("Employee Found in Leave count database!")
 
                 console.log(response1)
 
@@ -150,7 +151,7 @@ export class EmployeeLeaveHandleComponent {
                   )
 
 
-              // }
+              }
 
            
             }
