@@ -74,6 +74,11 @@
                     <input name="leaveStatus" [(ngModel)]="leaveStatus" type="text" class="form-control">
                 </div>
 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Enter From Date</label>
+                    <input type="date" name="fromDate" [(ngModel)]="fromDate" id="" class="form-control">
+                </div>
+
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <button (click)="LeaveApproval()" class="btn btn-warning">Update leave status</button>
@@ -92,6 +97,17 @@
                     <input type="number" class="form-control" value="{{remOL}}">
                 </div>
 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Enter the date except From date to mark employee log as absent</label>
+                    <input type="date" name="fromDate" [(ngModel)]="fromDate" id="" class="form-control">
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <button (click)="MarkAbsent()" class="btn btn-danger">Mark Employee Log as absent</button>
+                </div>
+            
+            
             </div>
 
             

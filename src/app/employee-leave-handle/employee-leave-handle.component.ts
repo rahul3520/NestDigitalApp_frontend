@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
@@ -23,6 +24,8 @@ export class EmployeeLeaveHandleComponent {
 
   searchData:any=[]
 
+  fromDate=""
+
   constructor(private api:ApiService){
 
     this.api.ViewLeaveApplicationJoinedWithLeaveCount().subscribe(
@@ -42,6 +45,8 @@ export class EmployeeLeaveHandleComponent {
   {
 
     let data:any={"id":this.id,"empId":this.empId,"leaveType":this.leaveType,"leaveStatus":this.leaveStatus} 
+
+    localStorage.setItem("fromDate",this.fromDate)
 
     console.log(data)
 
@@ -81,9 +86,9 @@ export class EmployeeLeaveHandleComponent {
 
                 console.log(response1)
 
-                localStorage.setItem("casualLeaveCount",response1.casualLeave)
-                localStorage.setItem("sickLeaveCount",response1.sickLeave)
-                localStorage.setItem("specialLeaveCount",response1.specialLeave)
+                localStorage.setItem("casualLeaveCount",response1[0].casualLeave)
+                localStorage.setItem("sickLeaveCount",response1[0].sickLeave)
+                localStorage.setItem("specialLeaveCount",response1[0].specialLeave)
 
                 this.remCL=localStorage.getItem("casualLeaveCount")
                 this.remSL=localStorage.getItem("sickLeaveCount")
@@ -106,6 +111,30 @@ export class EmployeeLeaveHandleComponent {
                         localStorage.setItem("casualLeaveCount",response2.remainingCasualLeaves)
                                 
                         this.remCL=localStorage.getItem("casualLeaveCount")
+                        
+                        let data3:any={"empId":localStorage.getItem("empInfo"),"date":localStorage.getItem("fromDate")}
+
+                        this.api.MarkEmployeeLogAsAbsent(data3).subscribe(
+
+                          (response3:any)=>
+                          {
+                            console.log(response3)
+
+                            if(response3.status=="Employee Log marked as absent")
+                            {
+                              alert("Employee Log marked as absent for the date. Enter any other dates to mark absent")
+
+                              this.fromDate=""
+                            }
+                            else
+                            {
+                              alert("Failed to mark Employee Log as absent..Try again")
+                            
+                            }
+
+                          }
+
+                        )
                       
 
                       }
@@ -121,6 +150,30 @@ export class EmployeeLeaveHandleComponent {
                         localStorage.setItem("sickLeaveCount",response2.remainingSickLeaves)
 
                         this.remSL=localStorage.getItem("sickLeaveCount")
+
+                        let data3:any={"empId":localStorage.getItem("empInfo"),"date":localStorage.getItem("fromDate")}
+
+                        this.api.MarkEmployeeLogAsAbsent(data3).subscribe(
+
+                          (response3:any)=>
+                          {
+                            console.log(response3)
+
+                            if(response3.status=="Employee Log marked as absent")
+                            {
+                              alert("Employee Log marked as absent for the date. Enter any other dates to mark absent")
+
+                              this.fromDate=""
+                            }
+                            else
+                            {
+                              alert("Failed to mark Employee Log as absent..Try again")
+                            
+                            }
+
+                          }
+
+                        )
                         
                       }
                       else if(response2.status=="No more sick leaves remaining")
@@ -134,6 +187,30 @@ export class EmployeeLeaveHandleComponent {
                         localStorage.setItem("specialLeaveCount",response2.remainingSpecialLeaves)
 
                         this.remOL=localStorage.getItem("specialLeaveCount")
+
+                        let data3:any={"empId":localStorage.getItem("empInfo"),"date":localStorage.getItem("fromDate")}
+
+                        this.api.MarkEmployeeLogAsAbsent(data3).subscribe(
+
+                          (response3:any)=>
+                          {
+                            console.log(response3)
+
+                            if(response3.status=="Employee Log marked as absent")
+                            {
+                              alert("Employee Log marked as absent for the date. Enter any other dates to mark absent")
+
+                              this.fromDate=""
+                            }
+                            else
+                            {
+                              alert("Failed to mark Employee Log as absent..Try again")
+                            
+                            }
+
+                          }
+
+                        )
                       }
                       else if(response2.status=="No more special leaves remaining")
                       {
@@ -171,6 +248,33 @@ export class EmployeeLeaveHandleComponent {
         {
 
           alert("Updating leave request as processing for the employee")
+        }
+
+      }
+
+    )
+  }
+
+  MarkAbsent=()=>
+  {
+    let data4:any={"empId":localStorage.getItem("empInfo"),"date":this.fromDate}
+
+    this.api.MarkEmployeeLogAsAbsent(data4).subscribe(
+
+      (response4:any)=>
+      {
+        console.log(response4)
+
+        if(response4.status=="Employee Log marked as absent")
+        {
+          alert("Employee Log marked as absent for the date. Enter any other date to mark the log as absent for the employee")
+
+          this.fromDate=""
+        }
+        else
+        {
+          alert("Failed to mark Employee Log as absent..Try again")
+        
         }
 
       }
