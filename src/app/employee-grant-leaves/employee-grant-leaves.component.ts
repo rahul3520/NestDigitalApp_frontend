@@ -10,7 +10,21 @@ export class EmployeeGrantLeavesComponent {
 
   empId=""
 
-  constructor(private api:ApiService){}
+  searchData:any=[]
+
+  constructor(private api:ApiService){
+
+    this.api.ViewAllLeaveCountOfAllEmployess().subscribe(
+
+      (response:any)=>
+      {
+        console.log(response)
+        this.searchData=response
+      }
+
+    )
+
+  }
 
   GrantLeavesForEmployee=()=>
   {
@@ -24,7 +38,7 @@ export class EmployeeGrantLeavesComponent {
         if(response.status=="employee added to leave count")
         {
           alert("Employee granted leaves for this year!")
-          
+
           this.empId=""
         }
         else

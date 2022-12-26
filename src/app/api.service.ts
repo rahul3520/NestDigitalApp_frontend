@@ -88,4 +88,59 @@ export class ApiService {
     return this.http.get("http://localhost:8080/viewLeaveApplicationWithLeaveCount")
   }
 
+  AddEmployeeEntry=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addEmployeeEntry",dataToSend)
+  }
+
+  AddVisitorEntry=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addVisitorEntry",dataToSend)
+  }
+
+  ViewAllEmployeeLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallEmployeeLogs")
+  }
+
+  UpdateEmployeeExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addEmployeeExit",dataToSend)
+  }
+
+  ViewAllVisitorLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallVisitorLogs")
+  }
+
+  UpdateVisitorExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addVisitorExit",dataToSend)
+  }
+
+  ViewAllLeaveCountOfAllEmployess=()=>
+  {
+    return this.http.get("http://localhost:8080/viewAllLeaveCountOfAllEmployees")
+  }
+
+  ViewEmployeeLogsByDate=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/findEmployeeLogsByDate",dataToSend)
+  }
+
+  ViewVisitorLogsByDate=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/findVisitorLogsByDate",dataToSend)
+  }
+
+  ViewAppliedLeaveStatus=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewAppliedLeaveStatus",dataToSend)
+  }
+
+  MarkEmployeeLogAsAbsent=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/markAbsentInEmployeeLog",dataToSend)
+  }
+
 }

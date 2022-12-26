@@ -26,6 +26,13 @@ import { AddSecurityGuardComponent } from './add-security-guard/add-security-gua
 import { ApplyForLeaveComponent } from './apply-for-leave/apply-for-leave.component';
 import { ViewMyLeavesComponent } from './view-my-leaves/view-my-leaves.component';
 import { EmployeeLeaveHandleComponent } from './employee-leave-handle/employee-leave-handle.component';
+import { EmployeeEntryComponent } from './employee-entry/employee-entry.component';
+import { VisitorEntryComponent } from './visitor-entry/visitor-entry.component';
+import { ViewAllEmployeeLogsComponent } from './view-all-employee-logs/view-all-employee-logs.component';
+import { ViewAllVisitorLogsComponent } from './view-all-visitor-logs/view-all-visitor-logs.component';
+import { ViewEmployeeLogsByDateComponent } from './view-employee-logs-by-date/view-employee-logs-by-date.component';
+import { ViewVisitorLogsByDateComponent } from './view-visitor-logs-by-date/view-visitor-logs-by-date.component';
+import { ViewMyLeaveStatusComponent } from './view-my-leave-status/view-my-leave-status.component';
 
 
 const myRoute:Routes=[
@@ -92,6 +99,34 @@ const myRoute:Routes=[
   {
     path:"employeeLeaveHandle",
     component:EmployeeLeaveHandleComponent
+  },
+  {
+    path:"employeeEntryLog",
+    component:EmployeeEntryComponent
+  },
+  {
+    path:"visitorEntryLog",
+    component:VisitorEntryComponent
+  },
+  {
+    path:"viewAllEmployeeLogsandUpdateExitTime",
+    component:ViewAllEmployeeLogsComponent
+  },
+  {
+    path:"viewAllVisitorLogsandUpdateExitTime",
+    component:ViewAllVisitorLogsComponent
+  },
+  {
+    path:"viewEmployeeLogsByDate",
+    component:ViewEmployeeLogsByDateComponent
+  },
+  {
+    path:"viewVisitorLogsByDate",
+    component:ViewVisitorLogsByDateComponent
+  },
+  {
+    path:"viewStatusofAppliedLeaves",
+    component:ViewMyLeaveStatusComponent
   }
 
 ]
@@ -117,7 +152,14 @@ const myRoute:Routes=[
     AddSecurityGuardComponent,
     ApplyForLeaveComponent,
     ViewMyLeavesComponent,
-    EmployeeLeaveHandleComponent
+    EmployeeLeaveHandleComponent,
+    EmployeeEntryComponent,
+    VisitorEntryComponent,
+    ViewAllEmployeeLogsComponent,
+    ViewAllVisitorLogsComponent,
+    ViewEmployeeLogsByDateComponent,
+    ViewVisitorLogsByDateComponent,
+    ViewMyLeaveStatusComponent
   ],
   imports: [
     BrowserModule,
