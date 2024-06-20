@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nest Digital App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" >Employee Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/employeeProfile">View My Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/applyForLeave">Apply for Leave</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/viewStatusofAppliedLeaves">View Applied Leave Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/viewMyLeaves">View Leaves Remaining</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/employeeLogin">Logout</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" >Logged Employee ID: {{empID}}</a>
+          </li> 
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Logged Employee ID:</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>

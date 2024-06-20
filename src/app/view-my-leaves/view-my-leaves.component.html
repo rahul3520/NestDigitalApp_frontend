@@ -1,0 +1,36 @@
+<app-employee-loginbar></app-employee-loginbar>
+
+<h4 style="text-align: left;">Logged Employee ID:{{empID}}</h4>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                    <div class="card" style="text-align:center;">
+                        <div class="card-header">
+                            Current Year: {{searchData[0].year}}
+                            
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Casual Leaves Remaining: {{searchData[0].casualLeave}}</li>
+
+                            <li class="list-group-item">Sick Leaves Remaining: {{searchData[0].sickLeave}}</li>
+  
+                            <li class="list-group-item">Special Leaves Remaining: {{searchData[0].specialLeave}}</li>
+                            
+                            <!-- <li class="list-group-item">Phone No: {{searchData[0].phoneNo}}</li> -->
+                            <!-- <li class="list-group-item">{{searchData[0].address}}</li> -->
+                            <!-- <li class="list-group-item">Email ID: {{searchData[0].emailId}}</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

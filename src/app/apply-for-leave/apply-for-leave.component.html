@@ -1,0 +1,67 @@
+<app-employee-loginbar></app-employee-loginbar>
+
+<h1 style="text-align: center;">Apply for Leave</h1>
+<div class="container">
+    <div class="row">
+
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+
+                <!-- <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div> -->
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Employee ID</label>
+                    <input type="text" class="form-control" value="{{empId}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Leave Type</label>
+                    
+                    <select name="leaveType" [(ngModel)]="leaveType" id="" class="form-control">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Casual">Casual Leave</option>
+                        <option value="Sick">Sick Leave</option>
+                        <option value="Special">Special Leave</option>
+                       
+                    </select>
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control"> Remarks </label>
+                    <textarea name="remarks" [(ngModel)]="remarks"  id="" cols="30" rows="10" class="form-control"></textarea>
+                    <!-- <input name="remarks" [(ngModel)]="remarks" type="text" class="form-control"> -->
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">From Date</label>
+                    <input name="fromDate" [(ngModel)]="fromDate" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">To Date</label>
+                    <input name="toDate" [(ngModel)]="toDate" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Apply Date</label>
+                    <input name="applyDate" [(ngModel)]="applyDate" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Leave Status ( processing )</label>
+                    <input type="text" class="form-control" value="{{0}}">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="ApplyLeave()" class="btn btn-success">Apply Now</button>
+                </div>
+                <!-- <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a routerLink="/employeeLogin"> <---go back to Employee Login page</a>
+                </div> -->
+
+            </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+
+

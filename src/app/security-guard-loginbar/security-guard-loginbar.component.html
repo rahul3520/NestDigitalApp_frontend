@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nest Digital App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" >Security Guard Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/securityGuardProfile">View My Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/employeeEntryLog">Log Employee Entry</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/viewAllEmployeeLogsandUpdateExitTime">Log Employee Exit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/visitorEntryLog">Log Visitor Entry</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/viewAllVisitorLogsandUpdateExitTime">Log Visitor Exit</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Log Visitor Exit</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More options
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/viewEmployeeLogsByDate">View Employee Logs by date</a></li>
+              <li><a class="dropdown-item" routerLink="/viewVisitorLogsByDate">View Visitor Logs by date</a></li>
+              <li><a class="dropdown-item" routerLink="/securityGuardLogin">Logout</a></li>
+            </ul>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/securityGuardLogin">Logout</a>
+          </li>  -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" >Logged Security Guard ID: {{sgID}}</a>
+          </li> 
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Logged Employee ID:</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>

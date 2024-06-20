@@ -1,0 +1,33 @@
+<app-security-guard-loginbar></app-security-guard-loginbar>
+
+<h3 style="text-align: left;">Logged Security Guard ID:{{sgID}}</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                    <div class="card" >
+                        <div class="card-header">
+                            Security Guard Code: {{searchData[0].empCode}}
+                            
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Name: {{searchData[0].name}}</li>
+  
+                            <li class="list-group-item">Salary: {{searchData[0].salary}}</li>
+                            <li class="list-group-item">Phone No: {{searchData[0].phoneNo}}</li>
+                            <!-- <li class="list-group-item">{{searchData[0].address}}</li> -->
+                            <li class="list-group-item">Email ID: {{searchData[0].emailId}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

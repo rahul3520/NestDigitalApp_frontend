@@ -1,0 +1,55 @@
+<app-security-guard-loginbar></app-security-guard-loginbar>
+
+<h1 style="text-align: center;">List of Visitor Logs</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 co-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Log ID</th>
+                                <th>Visitor Name</th>
+                                <th>Purpose</th>
+                                <th>Whom to meet</th>
+                                <th>Date</th>
+                                <th>Entry date time</th>
+                                <th>Exit date time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody *ngFor="let i of searchData">
+                            <tr>
+                                <td>{{i.id}}</td>
+                                <td>{{i.name}}</td>
+                                <td>{{i.purpose}}</td>
+                                <td>{{i.whomToMeet}}</td>
+                                <td>{{i.date}}</td>
+                                <td>{{i.entryDateTime}}</td>
+                                <td>{{i.exitDateTime}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Log ID</label>
+                    <input name="id" [(ngModel)]="id" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Date</label>
+                    <input name="date" [(ngModel)]="date" type="date" name="" id="" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="LogVisitorExit()" class="btn btn-danger">Log Exit Time for Visitor</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<app-security-guard-loginbar></app-security-guard-loginbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Enter Employee id</label>
+                    <input name="empId" [(ngModel)]="empId" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h4>Date automatically set to today's date</h4>
+                    <h4>Entry time automatically set as local time</h4>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="LogEmployeeEntry()" class="btn btn-success">Log Employee Entry</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

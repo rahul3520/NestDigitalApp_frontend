@@ -1,0 +1,32 @@
+<app-security-guard-loginbar></app-security-guard-loginbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Name of Visitor</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="label-control">Whom to meet</label>
+                    <input name="whomToMeet" [(ngModel)]="whomToMeet" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Purpose</label>
+                    <textarea name="purpose" [(ngModel)]="purpose" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h4>Date automatically set to today's date</h4>
+                    <h4>Entry time automatically set as local time</h4>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="LogVisitorEntry()" class="btn btn-success">Log Visitor Entry</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
